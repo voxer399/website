@@ -19,7 +19,7 @@ export function PricingCard({ icon, name, description, amount, unit, features, f
   return (
     <div
       className={cn(
-        "relative flex flex-col rounded-organic border bg-white p-8 transition-[transform,box-shadow] duration-[250ms] hover:-translate-y-1",
+        "relative flex flex-col rounded-organic border bg-surface p-8 transition-[transform,box-shadow] duration-[250ms] hover:-translate-y-1",
         featured
           ? "border-2 border-burgundy shadow-[0_14px_34px_rgba(123,0,44,0.12)]"
           : "border-hairline hover:shadow-[var(--shadow-lift)]",

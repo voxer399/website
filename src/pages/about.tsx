@@ -41,7 +41,7 @@ export default function About() {
         </div>
       </section>
 
-      <WaveDivider fill="#f5f2ee" />
+      <WaveDivider fill="var(--color-cream)" />
 
       <section className="bg-cream py-16">
         <div className="mx-auto max-w-[1120px] px-6">

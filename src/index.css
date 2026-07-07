@@ -6,11 +6,17 @@
   --color-burgundy-dark: #5a0020;
   --color-navy: #28304b;
   --color-navy-light: #353b67;
+  --color-navy-deep: #28304b;
   --color-rose: #b48490;
   --color-cream: #f5f2ee;
+  --color-surface: #ffffff;
+  --color-background: #ffffff;
   --color-ink: #23232a;
   --color-ink-muted: #55565f;
   --color-hairline: #e3ddd6;
+  --color-on-navy: #cfd3e2;
+  --color-on-navy-muted: #9ba1bd;
+  --color-on-navy-accent: #f4d9e2;
 
   --font-heading: "Cormorant Garamond", Georgia, "Times New Roman", serif;
   --font-body: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
@@ -19,6 +25,126 @@
 
   --shadow-soft: 0 8px 30px rgba(40, 48, 75, 0.08);
   --shadow-lift: 0 14px 34px rgba(40, 48, 75, 0.12);
+}
+
+/* ==========================================================================
+   Theming: color themes (data-palette) x light/dark mode (data-mode).
+   Tailwind v4 utilities (bg-burgundy, text-navy, etc.) read these custom
+   properties at runtime, so overriding them per attribute re-themes the
+   whole site without touching component classNames.
+   ========================================================================== */
+
+:root,
+:root[data-palette="classic"] {
+  --color-burgundy: #7b002c;
+  --color-burgundy-dark: #5a0020;
+  --color-navy: #28304b;
+  --color-navy-light: #353b67;
+  --color-navy-deep: #28304b;
+  --color-rose: #b48490;
+  --color-cream: #f5f2ee;
+  --color-surface: #ffffff;
+  --color-background: #ffffff;
+  --color-ink: #23232a;
+  --color-ink-muted: #55565f;
+  --color-hairline: #e3ddd6;
+  --color-on-navy: #cfd3e2;
+  --color-on-navy-muted: #9ba1bd;
+  --color-on-navy-accent: #f4d9e2;
+}
+
+:root[data-palette="sage"] {
+  --color-burgundy: #4a6b52;
+  --color-burgundy-dark: #35503b;
+  --color-navy: #2c3b36;
+  --color-navy-light: #3f524b;
+  --color-navy-deep: #23302b;
+  --color-rose: #c98a63;
+  --color-cream: #f2f0e6;
+  --color-surface: #ffffff;
+  --color-background: #ffffff;
+  --color-ink: #232620;
+  --color-ink-muted: #5b5f54;
+  --color-hairline: #ddded0;
+  --color-on-navy: #d7ded4;
+  --color-on-navy-muted: #a9b5a5;
+  --color-on-navy-accent: #f0d9c4;
+}
+
+:root[data-palette="ocean"] {
+  --color-burgundy: #1f5f74;
+  --color-burgundy-dark: #163f4d;
+  --color-navy: #1c2b3a;
+  --color-navy-light: #2a3d52;
+  --color-navy-deep: #16222e;
+  --color-rose: #7ea9bb;
+  --color-cream: #eef2f2;
+  --color-surface: #ffffff;
+  --color-background: #ffffff;
+  --color-ink: #1c2327;
+  --color-ink-muted: #52616c;
+  --color-hairline: #dbe3e5;
+  --color-on-navy: #d3dfe6;
+  --color-on-navy-muted: #9fb3bd;
+  --color-on-navy-accent: #cfe6ee;
+}
+
+:root[data-palette="classic"][data-mode="dark"] {
+  --color-burgundy: #b3123f;
+  --color-burgundy-dark: #8a0e30;
+  --color-navy: #dfe2f2;
+  --color-navy-light: #c7cbe6;
+  --color-navy-deep: #1c2337;
+  --color-rose: #cf9aa6;
+  --color-cream: #20222e;
+  --color-surface: #191b24;
+  --color-background: #191b24;
+  --color-ink: #e7e6ea;
+  --color-ink-muted: #a7a7b3;
+  --color-hairline: #33364a;
+  --color-on-navy: #cfd3e2;
+  --color-on-navy-muted: #9ba1bd;
+  --color-on-navy-accent: #f4d9e2;
+}
+
+:root[data-palette="sage"][data-mode="dark"] {
+  --color-burgundy: #4f7a5a;
+  --color-burgundy-dark: #3c5f45;
+  --color-navy: #d9e2d3;
+  --color-navy-light: #c3d0ba;
+  --color-navy-deep: #141a13;
+  --color-rose: #dba57c;
+  --color-cream: #1e2219;
+  --color-surface: #171a16;
+  --color-background: #171a16;
+  --color-ink: #e6e8e2;
+  --color-ink-muted: #a9afa1;
+  --color-hairline: #333a2f;
+  --color-on-navy: #d7ded4;
+  --color-on-navy-muted: #a9b5a5;
+  --color-on-navy-accent: #f0d9c4;
+}
+
+:root[data-palette="ocean"][data-mode="dark"] {
+  --color-burgundy: #2f7a91;
+  --color-burgundy-dark: #245e70;
+  --color-navy: #cfe0e8;
+  --color-navy-light: #b7d0da;
+  --color-navy-deep: #0d1418;
+  --color-rose: #9dc7d6;
+  --color-cream: #161e23;
+  --color-surface: #10161a;
+  --color-background: #10161a;
+  --color-ink: #e3ecee;
+  --color-ink-muted: #9db0b8;
+  --color-hairline: #2b3941;
+  --color-on-navy: #d3dfe6;
+  --color-on-navy-muted: #9fb3bd;
+  --color-on-navy-accent: #cfe6ee;
+}
+
+:root[data-mode="dark"] {
+  color-scheme: dark;
 }
 
 @layer base {
@@ -31,9 +157,10 @@
   }
 
   body {
-    @apply bg-white text-ink font-body antialiased;
+    @apply bg-surface text-ink font-body antialiased;
     font-size: 18px;
     line-height: 1.65;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 
   h1, h2, h3, h4 {

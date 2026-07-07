@@ -8,7 +8,7 @@ export function Layout({ current, children }: { current: PageKey; children: Reac
     <>
       <a
         href="#main"
-        className="fixed left-0 top-0 z-[1000] -translate-x-full rounded-br-lg bg-navy px-5 py-3 text-white focus:translate-x-0"
+        className="fixed left-0 top-0 z-[1000] -translate-x-full rounded-br-lg bg-navy-deep px-5 py-3 text-white focus:translate-x-0"
       >
         Skip to main content
       </a>

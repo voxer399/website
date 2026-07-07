@@ -26,7 +26,7 @@ export default function Program() {
         </div>
       </section>
 
-      <WaveDivider fill="#ffffff" />
+      <WaveDivider fill="var(--color-surface)" />
 
       <section id="sbp" className="py-16">
         <div className="mx-auto max-w-[1120px] px-6">
@@ -128,7 +128,7 @@ export default function Program() {
         </div>
       </section>
 
-      <section className="bg-navy py-16 text-center text-[#dfe2ee] [&_h2]:text-white">
+      <section className="bg-navy-deep py-16 text-center text-on-navy [&_h2]:text-white">
         <div className="mx-auto max-w-[1120px] px-6">
           <h2>Our Goal</h2>
           <p className="mx-auto max-w-[680px]">

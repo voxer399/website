@@ -25,7 +25,7 @@ const TOPICS = [
 export default function Home() {
   return (
     <Layout current="home">
-      <section className="bg-gradient-to-br from-cream to-cream bg-cream py-15 pb-[70px] overflow-hidden [background:radial-gradient(circle_at_85%_20%,rgba(123,0,44,0.07),transparent_55%),radial-gradient(circle_at_10%_90%,rgba(40,48,75,0.06),transparent_45%),var(--color-cream)]">
+      <section className="bg-cream py-15 pb-[70px] overflow-hidden [background:radial-gradient(circle_at_85%_20%,color-mix(in_srgb,var(--color-burgundy)_7%,transparent),transparent_55%),radial-gradient(circle_at_10%_90%,color-mix(in_srgb,var(--color-navy)_6%,transparent),transparent_45%),var(--color-cream)]">
         <div className="mx-auto grid max-w-[1120px] grid-cols-1 items-center gap-10 px-6 text-center lg:grid-cols-[1.2fr_0.8fr] lg:text-left">
           <div className="animate-fade-in-up">
             <p className="mb-3.5 text-[0.95rem] font-bold uppercase tracking-wider text-burgundy">
@@ -50,14 +50,14 @@ export default function Home() {
               <img
                 src={asset("assets/images/hero-portrait.png")}
                 alt="Portrait of Andrea Forán, psychologist"
-                className="relative rounded-full border-[6px] border-white shadow-[var(--shadow-soft)]"
+                className="relative rounded-full border-[6px] border-surface shadow-[var(--shadow-soft)]"
               />
             </div>
           </div>
         </div>
       </section>
 
-      <WaveDivider fill="#ffffff" />
+      <WaveDivider fill="var(--color-surface)" />
 
       <TrustStrip />
 
@@ -155,7 +155,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-navy py-16 text-[#dfe2ee] [&_h2]:text-white">
+      <section className="bg-navy-deep py-16 text-on-navy [&_h2]:text-white">
         <div className="mx-auto grid max-w-[1120px] grid-cols-1 items-center gap-12 px-6 lg:grid-cols-[0.9fr_1.1fr]">
           <Reveal>
             <h2>Ready to talk?</h2>

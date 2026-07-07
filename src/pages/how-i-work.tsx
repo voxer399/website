@@ -45,7 +45,7 @@ export default function HowIWork() {
         </div>
       </section>
 
-      <WaveDivider fill="#ffffff" />
+      <WaveDivider fill="var(--color-surface)" />
 
       <section className="py-16">
         <div className="mx-auto max-w-[1120px] px-6">

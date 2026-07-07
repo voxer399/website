@@ -11,7 +11,7 @@ const ITEMS: { icon: ReactNode; title: string; desc: string }[] = [
 
 export function TrustStrip() {
   return (
-    <section className="border-b border-hairline bg-white py-9">
+    <section className="border-b border-hairline bg-surface py-9">
       <div className="mx-auto grid max-w-[1120px] grid-cols-2 gap-5 px-6 md:grid-cols-4">
         {ITEMS.map((item, i) => (
           <Reveal key={item.title} delay={i as 0 | 1 | 2 | 3} className="flex items-center gap-3.5">

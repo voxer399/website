@@ -6,7 +6,7 @@ export function Card({ children, className, id }: { children: ReactNode; classNa
     <div
       id={id}
       className={cn(
-        "rounded-organic border border-hairline bg-white p-7 transition-[transform,box-shadow] duration-[250ms] hover:-translate-y-1 hover:shadow-[var(--shadow-lift)]",
+        "rounded-organic border border-hairline bg-surface p-7 transition-[transform,box-shadow] duration-[250ms] hover:-translate-y-1 hover:shadow-[var(--shadow-lift)]",
         className,
       )}
     >
