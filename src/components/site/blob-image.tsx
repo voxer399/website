@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils"
+import { asset } from "@/lib/asset"
 
 interface BlobImageProps {
   src: string
@@ -18,7 +19,7 @@ export function BlobImage({ src, alt, variant = "default", float = false, classN
         className,
       )}
     >
-      <img src={src} alt={alt} className="h-full w-full object-cover" />
+      <img src={asset(src)} alt={alt} className="h-full w-full object-cover" />
     </div>
   )
 }

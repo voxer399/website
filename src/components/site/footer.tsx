@@ -1,5 +1,6 @@
 import type { ReactNode } from "react"
 import { Mail, Phone, CalendarDays } from "lucide-react"
+import { asset } from "@/lib/asset"
 import { CALENDLY_URL } from "@/components/site/nav-links"
 
 export function Footer() {
@@ -8,7 +9,7 @@ export function Footer() {
       <div className="mx-auto max-w-[1120px] px-6">
         <div className="mb-5 flex flex-wrap items-start justify-between gap-8 border-b border-white/15 pb-7">
           <div>
-            <img src="assets/images/logo-white.png" alt="Andrea Forán, Psychologist – logo" className="mb-3 h-11 w-auto" />
+            <img src={asset("assets/images/logo-white.png")} alt="Andrea Forán, Psychologist – logo" className="mb-3 h-11 w-auto" />
             <p className="max-w-[320px] text-[0.95rem] text-[#b9bedb]">
               Online consultations in English or Hungarian, by appointment.
             </p>

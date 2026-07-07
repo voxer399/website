@@ -1,5 +1,6 @@
 import { Layout } from "@/components/site/layout"
 import { Button } from "@/components/ui/button"
+import { asset } from "@/lib/asset"
 import { BlobImage } from "@/components/site/blob-image"
 import { WaveDivider } from "@/components/site/wave-divider"
 import { Card } from "@/components/site/card"
@@ -102,7 +103,7 @@ export default function HowIWork() {
               walk this path alone.
             </p>
             <Button asChild variant="primary">
-              <a href="program.html">Read About the Self-Building Programs</a>
+              <a href={asset("program.html")}>Read About the Self-Building Programs</a>
             </Button>
           </Reveal>
           <Reveal delay={1}>

@@ -5,7 +5,12 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "./",
+  // Absolute base path for this GitHub Pages project site. Using a relative
+  // base ("./") breaks when a page is loaded without a trailing slash
+  // (e.g. "/website" instead of "/website/") since the browser then
+  // resolves relative asset paths against the wrong directory. Change this
+  // to "/" if this ever moves to a custom domain or repo root.
+  base: "/website/",
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {

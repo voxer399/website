@@ -1,5 +1,6 @@
 import { MessageCircle, CalendarClock, Star } from "lucide-react"
 import { Layout } from "@/components/site/layout"
+import { asset } from "@/lib/asset"
 import { Button } from "@/components/ui/button"
 import { WaveDivider } from "@/components/site/wave-divider"
 import { Card } from "@/components/site/card"
@@ -13,7 +14,7 @@ const FAQ_ITEMS = [
   { question: "Are sessions online or in person?", answer: "Sessions take place online, which most clients find more comfortable, private, and easier to fit into daily life." },
   { question: "How long is the first session?", answer: "The first session runs 75–90 minutes, giving us enough time to get to know each other and understand what brought you here. Every session after that is 55 minutes." },
   { question: "What if I need to cancel or reschedule?", answer: "No problem, free of charge, up to 24 hours before your appointment. Cancelling within 24 hours adds 50% of the session fee to your next booking." },
-  { question: "How do I know if the Self-Building Program is right for me?", answer: <>Book a first conversation and we'll figure it out together. See the <a href="program.html">Self-Building Program page</a> for a full breakdown of who it's for.</> },
+  { question: "How do I know if the Self-Building Program is right for me?", answer: <>Book a first conversation and we'll figure it out together. See the <a href={asset("program.html")}>Self-Building Program page</a> for a full breakdown of who it's for.</> },
   { question: "Is what I share with you confidential?", answer: "Yes. Every conversation is fully confidential, in accordance with professional ethical standards." },
 ]
 

@@ -1,5 +1,6 @@
 import { Layout } from "@/components/site/layout"
 import { Button } from "@/components/ui/button"
+import { asset } from "@/lib/asset"
 import { BlobImage } from "@/components/site/blob-image"
 import { WaveDivider } from "@/components/site/wave-divider"
 import { TrustStrip } from "@/components/site/trust-strip"
@@ -39,7 +40,7 @@ export default function Home() {
                 <a href={CALENDLY_URL} target="_blank" rel="noopener">Book an Appointment</a>
               </Button>
               <Button asChild variant="outline">
-                <a href="program.html">What is the Self-Building Program?</a>
+                <a href={asset("program.html")}>What is the Self-Building Program?</a>
               </Button>
             </div>
           </div>
@@ -47,7 +48,7 @@ export default function Home() {
             <div className="relative">
               <div className="absolute -inset-4 rounded-full border-2 border-rose opacity-55" />
               <img
-                src="assets/images/hero-portrait.png"
+                src={asset("assets/images/hero-portrait.png")}
                 alt="Portrait of Andrea Forán, psychologist"
                 className="relative rounded-full border-[6px] border-white shadow-[var(--shadow-soft)]"
               />
@@ -84,7 +85,7 @@ export default function Home() {
               to rely confidently on your own inner strength.
             </p>
             <Button asChild variant="primary">
-              <a href="how-i-work.html">How I Work</a>
+              <a href={asset("how-i-work.html")}>How I Work</a>
             </Button>
           </Reveal>
           <Reveal delay={1}>
@@ -113,7 +114,7 @@ export default function Home() {
                 <p>For those who keep running into the same obstacles and want to better understand how they function.</p>
                 <p className="text-[0.95rem] text-ink-muted"><strong>Self-knowledge · Boundaries · Conscious change</strong></p>
                 <Button asChild variant="outline">
-                  <a href="program.html#sbp">More about SBP</a>
+                  <a href={asset("program.html#sbp")}>More about SBP</a>
                 </Button>
               </Card>
             </Reveal>
@@ -123,7 +124,7 @@ export default function Home() {
                 <p>Helps you find new balance and rebuild yourself after major life turning points, losses, or big changes.</p>
                 <p className="text-[0.95rem] text-ink-muted"><strong>Starting over · Stability · New foundations</strong></p>
                 <Button asChild variant="outline">
-                  <a href="program.html#renewed-sbp">More about Renewed SBP</a>
+                  <a href={asset("program.html#renewed-sbp")}>More about Renewed SBP</a>
                 </Button>
               </Card>
             </Reveal>
@@ -148,7 +149,7 @@ export default function Home() {
               helps you find your place in the world and live authentically, without inner conflict.
             </p>
             <Button asChild variant="primary">
-              <a href="about.html">Learn More About Me</a>
+              <a href={asset("about.html")}>Learn More About Me</a>
             </Button>
           </Reveal>
         </div>
@@ -162,7 +163,7 @@ export default function Home() {
               Online consultations in English or Hungarian, with flexible appointment times and advance booking.
             </p>
             <Button asChild variant="primary">
-              <a href="contact.html">Get in Touch</a>
+              <a href={asset("contact.html")}>Get in Touch</a>
             </Button>
           </Reveal>
           <Reveal delay={1} className="mx-auto w-full max-w-[280px]">
