@@ -9,8 +9,16 @@ export function Header({ current }: { current: PageKey }) {
   return (
     <header className="sticky top-0 z-50 bg-surface border-b border-hairline">
       <div className="mx-auto flex max-w-[1120px] items-center justify-between gap-5 px-6 py-3.5">
-        <a href={asset("index.html")} className="flex items-center gap-3">
-          <img src={asset("assets/images/logo.png")} alt="Andrea Forán, Psychologist – logo" className="h-[52px] w-auto" />
+        <a href={asset("index.html")} aria-label="Andrea Forán, Psychologist – home" className="flex items-center gap-3">
+          <img src={asset("assets/images/favicon-180.png")} alt="" className="h-11 w-11 shrink-0" />
+          <span className="leading-tight whitespace-nowrap">
+            <span className="block font-heading text-[1.2rem] font-semibold uppercase tracking-wide text-navy">
+              Andrea Forán
+            </span>
+            <span className="block text-[0.7rem] font-semibold uppercase tracking-wider text-ink-muted">
+              Licensed Psychologist
+            </span>
+          </span>
         </a>
 
         <nav className="hidden lg:block" aria-label="Main navigation">

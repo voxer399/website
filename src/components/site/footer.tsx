@@ -9,7 +9,17 @@ export function Footer() {
       <div className="mx-auto max-w-[1120px] px-6">
         <div className="mb-5 flex flex-wrap items-start justify-between gap-8 border-b border-white/15 pb-7">
           <div>
-            <img src={asset("assets/images/logo-white.png")} alt="Andrea Forán, Psychologist – logo" className="mb-3 h-11 w-auto" />
+            <div className="mb-3 flex items-center gap-3">
+              <img src={asset("assets/images/favicon-180.png")} alt="" className="h-10 w-10 shrink-0" />
+              <span className="leading-tight whitespace-nowrap">
+                <span className="block font-heading text-[1.2rem] font-semibold uppercase tracking-wide text-white">
+                  Andrea Forán
+                </span>
+                <span className="block text-[0.7rem] font-semibold uppercase tracking-wider text-on-navy-muted">
+                  Licensed Psychologist
+                </span>
+              </span>
+            </div>
             <p className="max-w-[320px] text-[0.95rem] text-on-navy-muted">
               Online consultations in English or Hungarian, by appointment.
             </p>
