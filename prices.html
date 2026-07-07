@@ -33,13 +33,51 @@
     <meta name="twitter:description" content="Consultation fees, session length, cancellation policy, and confidentiality information for Andrea Forán's psychology practice." />
     <meta name="twitter:image" content="https://voxer399.github.io/website/assets/images/hero-portrait.png" />
 
-    <link rel="icon" href="/assets/images/favicon-32.png" sizes="32x32" />
-    <link rel="apple-touch-icon" href="/assets/images/favicon-180.png" />
+    <link rel="icon" href="assets/images/favicon-32.png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="assets/images/favicon-180.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   </head>
   <body>
+    <div id="page-transition-overlay" class="is-visible" aria-hidden="true">
+      <img src="assets/images/favicon-180.png" alt="" />
+    </div>
+    <script>
+      (function () {
+        var overlay = document.getElementById("page-transition-overlay");
+        if (!overlay) return;
+
+        setTimeout(function () {
+          overlay.classList.remove("is-visible");
+        }, 450);
+
+        document.addEventListener(
+          "click",
+          function (e) {
+            if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+            var a = e.target.closest("a");
+            if (!a || !a.href || a.target === "_blank" || a.hasAttribute("download")) return;
+            var url;
+            try {
+              url = new URL(a.href, window.location.href);
+            } catch (err) {
+              return;
+            }
+            if (url.origin !== window.location.origin) return;
+            if (url.pathname === window.location.pathname && url.hash) return;
+            if (!/\.html?$/.test(url.pathname)) return;
+
+            e.preventDefault();
+            overlay.classList.add("is-visible");
+            setTimeout(function () {
+              window.location.href = a.href;
+            }, 450);
+          },
+          true,
+        );
+      })();
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/entry-prices.tsx"></script>
   </body>

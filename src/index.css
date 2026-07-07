@@ -258,3 +258,42 @@
   from { opacity: 0; transform: scale(1.015); }
   to { opacity: 1; transform: scale(1); }
 }
+
+/* ==========================================================================
+   Branded page-transition overlay (works in every browser, unlike the
+   native View Transitions above). A small inline script in each page's
+   <head> fades this in on internal link clicks before navigating away,
+   and fades it out shortly after the destination page loads.
+   ========================================================================== */
+
+#page-transition-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-burgundy);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.45s ease, visibility 0s linear 0.45s;
+}
+
+#page-transition-overlay.is-visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  transition: opacity 0.45s ease, visibility 0s linear 0s;
+}
+
+#page-transition-overlay img {
+  width: 64px;
+  height: 64px;
+  animation: page-transition-pulse 1s ease-in-out infinite;
+}
+
+@keyframes page-transition-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.85; }
+  50% { transform: scale(1.12); opacity: 1; }
+}
