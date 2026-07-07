@@ -3,6 +3,8 @@ import { Mail, Phone, CalendarDays } from "lucide-react"
 import { Layout } from "@/components/site/layout"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/site/card"
+import { BlobImage } from "@/components/site/blob-image"
+import { Reveal } from "@/components/site/reveal"
 import { CALENDLY_URL } from "@/components/site/nav-links"
 
 export default function Contact() {
@@ -16,6 +18,25 @@ export default function Contact() {
             If you feel it's time for a change, or you'd like to talk honestly with someone about what feels
             difficult right now, reach out with confidence.
           </p>
+        </div>
+      </section>
+
+      <section className="bg-cream py-16">
+        <div className="mx-auto grid max-w-[1120px] grid-cols-1 items-center gap-12 px-6 lg:grid-cols-[0.9fr_1.1fr]">
+          <Reveal className="lg:order-2">
+            <BlobImage
+              src="assets/images/section-cabin.jpg"
+              alt="A quiet mountain view from a wooden cabin balcony, symbolizing taking a moment to pause and reach out"
+              variant="alt"
+            />
+          </Reveal>
+          <Reveal delay={1} className="lg:order-1">
+            <h2>Taking the First Step</h2>
+            <p>
+              Reaching out is often the hardest part. Once you do, we'll take it from there together — at your own
+              pace, in the language you're most comfortable in.
+            </p>
+          </Reveal>
         </div>
       </section>
 

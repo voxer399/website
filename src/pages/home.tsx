@@ -135,7 +135,11 @@ export default function Home() {
       <section className="bg-cream py-16">
         <div className="mx-auto grid max-w-[1120px] grid-cols-1 items-center gap-12 px-6 lg:grid-cols-[0.9fr_1.1fr]">
           <Reveal className="lg:order-2">
-            <BlobImage src="assets/images/about-portrait.jpg" alt="Andrea Forán, psychologist" variant="alt" />
+            <BlobImage
+              src="assets/images/section-meadow.jpg"
+              alt="A quiet mountain valley with a winding stream at sunrise, symbolizing self-knowledge and finding your own path"
+              variant="alt"
+            />
           </Reveal>
           <Reveal delay={1} className="lg:order-1">
             <h2>Relationships. Self-Knowledge. Identity.</h2>

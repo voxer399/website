@@ -123,7 +123,7 @@ export default function Program() {
             </p>
           </Reveal>
           <Reveal delay={1}>
-            <BlobImage src="assets/images/section-forest.jpg" alt="Light breaking through a forest, symbolizing new growth" />
+            <BlobImage src="assets/images/section-lake.jpg" alt="A calm alpine lake perfectly reflecting the mountains and sky, symbolizing clarity and stillness" />
           </Reveal>
         </div>
       </section>

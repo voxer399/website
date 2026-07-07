@@ -6,6 +6,7 @@ import { WaveDivider } from "@/components/site/wave-divider"
 import { Card } from "@/components/site/card"
 import { PricingCard } from "@/components/site/pricing-card"
 import { FaqSection } from "@/components/site/faq-section"
+import { BlobImage } from "@/components/site/blob-image"
 import { Reveal } from "@/components/site/reveal"
 import { CALENDLY_URL } from "@/components/site/nav-links"
 
@@ -70,6 +71,25 @@ export default function Prices() {
               />
             </Reveal>
           </div>
+        </div>
+      </section>
+
+      <section className="py-16">
+        <div className="mx-auto grid max-w-[1120px] grid-cols-1 items-center gap-12 px-6 lg:grid-cols-[1.1fr_0.9fr]">
+          <Reveal>
+            <h2>Investing in Yourself</h2>
+            <p>
+              Consistent, committed care tends to bring the most lasting change. Many clients find that a regular
+              rhythm — weekly or biweekly — helps the work stick.
+            </p>
+          </Reveal>
+          <Reveal delay={1}>
+            <BlobImage
+              src="assets/images/section-deer.jpg"
+              alt="A roe deer standing calmly in a misty morning meadow, symbolizing quiet, gradual change"
+              float
+            />
+          </Reveal>
         </div>
       </section>
 

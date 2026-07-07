@@ -38,6 +38,10 @@ export function Footer() {
           </FooterContact>
         </div>
         <p className="text-center text-[0.95rem] text-on-navy-muted">foranandrea.hu © 2026 · All rights reserved</p>
+        <p className="mt-2 text-center text-[0.78rem] text-on-navy-muted/70">
+          Additional photography via Wikimedia Commons: inkknife_2000, mendhak, Saschox (CC BY /
+          CC BY-SA), Pseudopanax (public domain).
+        </p>
       </div>
     </footer>
   )
